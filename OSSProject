@@ -1,0 +1,25 @@
+class OSSProject:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.contributors = []
+
+    def add_contributor(self, contributor):
+        self.contributors.append(contributor)
+
+    def get_project_info(self):
+        return {
+            "name": self.name,
+            "description": self.description,
+            "contributors": self.contributors
+        }
+
+# 创建一个新的开源项目
+my_project = OSSProject("My Project", "This is a description of my project.")
+
+# 添加一个贡献者
+my_project.add_contributor("Contributor Name")
+
+# 获取项目信息
+project_info = my_project.get_project_info()
+print(project_info)
